@@ -1,0 +1,57 @@
+{
+  "name": "nativepress",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "main": "server",
+  "author": {
+    "name": "David Melo",
+    "email": "david.melo@fastpbx.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "server",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^11.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "server:dev": "nodemon --verbose server/",
+    "server:start": "node server/",
+    "client:dev": "next ./client",
+    "client:build": "next build ./client/",
+    "client:start": "next start ./client/"
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^2.0.4",
+    "@feathersjs/errors": "^3.3.4",
+    "@feathersjs/express": "^1.2.7",
+    "@feathersjs/feathers": "^3.2.3",
+    "@zeit/next-sass": "^1.0.1",
+    "apollo-boost": "^0.3.1",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "graphql": "^14.1.1",
+    "graphql-tag": "^2.10.1",
+    "helmet": "^3.15.0",
+    "next": "^8.0.3",
+    "next-with-apollo": "^3.4.0",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-apollo": "^2.5.2",
+    "react-dom": "^16.8.4",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.7",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
