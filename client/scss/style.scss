@@ -1,4 +1,12 @@
-@import "global";
-@import "splash";
+@import "variables";
 
+@import "~bootstrap/scss/bootstrap";
+
+@import "typography";
+@import "global";
+@import "navbar";
+@import "sections";
+@import "splash";
+@import "boxes";
+@import "cta";
 

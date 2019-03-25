@@ -8,9 +8,9 @@ class Main extends React.Component {
         return (
             <Fragment>
                 <Meta />
-                <Fragment>
+                <main>
                     { this.props.children }
-                </Fragment>
+                </main>
             </Fragment>
         )
     }
