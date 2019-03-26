@@ -7,6 +7,7 @@ import Page from '../layouts/Page';
 import GetAppByDomainQuery from "../gql/GetAppByDomain";
 import Navigation from "../components/Navigation";
 
+
 class Index extends React.Component {
     render() {
         const { error, data } = this.props;
@@ -51,28 +52,22 @@ class Index extends React.Component {
                 </section>
 
                 <section>
-
                     <Container>
-
                         <div className="text-center h2">
                             Locally Owned & Grown <br/>
                             Delivery & Installation Available <br/>
                             Wholesale & Retail <br/>
                         </div>
-
                     </Container>
-
                 </section>
 
                 <section className="bg-secondary">
-
                     <Container>
-
                         <img className="img-fluid" src="https://via.placeholder.com/1200x400" alt="Mr. Clusia" />
-
                     </Container>
-
                 </section>
+
+
 
             </Page>
         );
