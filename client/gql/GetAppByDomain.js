@@ -5,6 +5,9 @@ export default gql`
         app: GetAppByDomain(domain: $domain) {
             id
             name
+            description
+            tagline
+            logo_image
             splashview {
                 id
                 slug

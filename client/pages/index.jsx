@@ -2,6 +2,7 @@ import React from "react";
 import {graphql} from "react-apollo";
 import { Container, Button, Row, Col } from 'reactstrap';
 
+import Meta from '../components/Meta'
 import Page from '../layouts/Page';
 
 import GetAppByDomainQuery from "../gql/GetAppByDomain";
@@ -15,7 +16,8 @@ class Index extends React.Component {
         return (
             <Page>
 
-                <Navigation title="Mr. Clusia" logo="https://s3.amazonaws.com/spectre-uploads/qsHJWt27sZdjJG2HuhY4HA1NILJV94Ek7rTqKG9m.png" />
+                <Meta title={data.app.name} tagline={data.app.tagline} description={data.app.description}/>
+                <Navigation title={data.app.name} logo={data.app.logo_image} collection={data.app.navigation}/>
 
                 <section className="bg-primary primary-section" style={{backgroundImage: "url('https://s3.amazonaws.com/spectre-uploads/ZhRB0FRAoBVKleLpOESiiMN1pH1XJGqwpS9Dpxm8.png')"}}>
 
