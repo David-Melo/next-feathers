@@ -7,11 +7,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
+    NavLink
 } from 'reactstrap';
 import PropTypes from 'prop-types';
 
@@ -45,17 +41,13 @@ class Navigation extends React.Component {
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
                             <Nav className="ml-auto" navbar>
-                                <NavItem>
-                                    <NavLink href="/" title="Home" >Home</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="/home" title="Home" >About</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink href="/contact" title="Home" >Contact</NavLink>
-                                </NavItem>
+                                {this.props.collection && this.props.collection.pages.map((i,k)=>(
+                                    <NavItem key={k}>
+                                        <NavLink href={i.slug} title={i.title} >{i.title}</NavLink>
+                                    </NavItem>
+                                ))}
                             </Nav>
-                            <Nav className="nav-cta-wrapper" navbar>
+                            <Nav className="nav-cta-wrapper ml-4" navbar>
                                 <NavItem>
                                     <NavLink href="tel:3052227171" title="Click To Call" className="nav-cta">305-222-7171</NavLink>
                                 </NavItem>
@@ -69,7 +61,9 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-    title : PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    logo: PropTypes.string,
+    collection: PropTypes.object
 };
 
 export default Navigation;

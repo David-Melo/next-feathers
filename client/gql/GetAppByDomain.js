@@ -8,6 +8,16 @@ export default gql`
             description
             tagline
             logo_image
+            navcollection {
+              id
+              slug
+              name
+              pages {
+                id
+                title
+                slug
+              }
+            }
             splashview {
                 id
                 slug
